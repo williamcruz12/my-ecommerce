@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa Polo",
+      "price": 59.9,
+      "categoria": "kits",
+      "image": "https://via.placeholder.com/150?text=Camisa+Polo"
+    },
+    {
+      "id": 2,
+      "name": "Tênis Esportivo",
+      "price": 199.9,
+      "categoria": "kits",
+      "image": "https://via.placeholder.com/150?text=T%C3%AAnis"
+    },
+    {
+      "id": 3,
+      "name": "Relógio Digital",
+      "price": 349.9,
+      "categoria": "kits",
+      "image": "https://via.placeholder.com/150?text=Rel%C3%B3gio"
+    },
+    {
+      "id": 4,
+      "name": "Boné Aba Reta",
+      "price": 29.9,
+      "categoria": "cestas",
+      "image": "https://via.placeholder.com/150?text=Bon%C3%A9"
+    },
+    {
+      "id": 5,
+      "name": "Calça Jeans",
+      "price": 119.9,
+      "categoria": "chocolates",
+      "image": "https://via.placeholder.com/150?text=Cal%C3%A7a"
+    },
+    {
+      "id": 6,
+      "name": "Jaqueta Couro",
+      "price": 499.9,
+      "categoria": "chocolates",
+      "image": "https://via.placeholder.com/150?text=Jaqueta"
+    },
+    {
+      "id": 7,
+      "name": "Cesta de Café Gourmet",
+      "price": 89.9,
+      "categoria": "cestas",
+      "image": "https://source.unsplash.com/150x150/?breakfast"
+    },
+    {
+      "id": 8,
+      "name": "Chocolate Belga Amargo",
+      "price": 25.5,
+      "categoria": "chocolates",
+      "image": "https://source.unsplash.com/150x150/?dark-chocolate"
+    },
+    {
+      "id": 9,
+      "name": "Kit Namorados Premium",
+      "price": 150.0,
+      "categoria": "kits",
+      "image": "https://source.unsplash.com/150x150/?gift"
+    },
+    {
+      "id": 10,
+      "name": "Buquê de Chocolate com Frutas",
+      "price": 99.0,
+      "categoria": "buques",
+      "image": "https://source.unsplash.com/150x150/?fruit-bouquet"
+    }
+  ]
+}

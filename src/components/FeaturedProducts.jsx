@@ -1,13 +1,17 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { addToCart } from '../utils/cartUtils';
+import chocolateImg from '../assets/choc.jpg';
+import cestaImg from '../assets/cesta.jpg';
+import chocolate2Img from '../assets/chocolate2.webp';
+import buqueImg from '../assets/buque.jpeg';
 
 const featuredProducts = [
-  { id: 1, name: 'Chocolate Amargo 70%', price: 20, oldPrice: 30, image: 'https://source.unsplash.com/400x300/?chocolate' },
-  { id: 2, name: 'Cesta Café da Manhã', price: 85, oldPrice: 120, image: 'https://source.unsplash.com/400x300/?breakfast' },
-  { id: 3, name: 'Kit Namorados', price: 99, oldPrice: 150, image: 'https://source.unsplash.com/400x300/?gift' },
-  { id: 4, name: 'Buquê Choco-Frutas', price: 70, oldPrice: 95, image: 'https://source.unsplash.com/400x300/?fruit-bouquet' },
-  { id: 5, name: 'Chocolate Branco Gourmet', price: 28, oldPrice: 38, image: 'https://source.unsplash.com/400x300/?white-chocolate' },
+  { id: 1, name: 'Chocolate Amargo 70%', price: 20, oldPrice: 30, image: chocolateImg },
+  { id: 2, name: 'Cesta Café da Manhã', price: 85, oldPrice: 120, image: cestaImg },
+  { id: 3, name: 'Kit Namorados', price: 99, oldPrice: 150, image: chocolate2Img },
+  { id: 4, name: 'Buquê Choco-Frutas', price: 70, oldPrice: 95, image: buqueImg },
+  { id: 5, name: 'Chocolate Branco Gourmet', price: 28, oldPrice: 38, image: chocolateImg },
 ];
 
 export default function FeaturedProducts() {
@@ -20,7 +24,7 @@ export default function FeaturedProducts() {
     return () => clearInterval(interval);
   }, [activeIndex]);
 
-  const goTo = index => {
+  const goTo = (index) => {
     let next = index;
     if (index >= featuredProducts.length) next = 0;
     if (index < 0) next = featuredProducts.length - 1;
@@ -28,7 +32,7 @@ export default function FeaturedProducts() {
     setActiveIndex(next);
     if (carouselRef.current) {
       carouselRef.current.scrollTo({
-        left: next * 300,
+        left: next * 324, // 300 width + 24 margin/padding (ajuste conforme seu gap)
         behavior: 'smooth',
       });
     }
@@ -63,7 +67,7 @@ export default function FeaturedProducts() {
         onScroll={() => {
           if (carouselRef.current) {
             const scrollLeft = carouselRef.current.scrollLeft;
-            const widthPerItem = 300 + 24;
+            const widthPerItem = 324; // ajuste conforme seu item + gap
             const idx = Math.round(scrollLeft / widthPerItem);
             setActiveIndex(idx);
           }

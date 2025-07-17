@@ -1,29 +1,35 @@
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
+import chocolateImg from '../assets/choc.jpg';
+import cestaImg from '../assets/cesta.jpg';
+import chocolate2Img from '../assets/chocolate2.webp';
+import buqueImg from '../assets/buque.jpeg';
+
 
 const categories = [
   {
-    type: "chocolates-ao-leite-amargo", // alterado aqui para subcategorias juntas
+    type: "chocolates-ao-leite-amargo",
     title: "Chocolates",
-    image: "https://source.unsplash.com/400x300/?chocolates",
+    image: chocolateImg,
   },
   {
     type: "cestas",
     title: "Cestas",
-    image: "https://source.unsplash.com/400x300/?breakfast",
+    image: cestaImg,
   },
   {
     type: "kits",
     title: "Kits",
-    image: "https://source.unsplash.com/400x300/?gift",
+    image: chocolate2Img,
   },
   {
     type: "buques",
     title: "Buquê de Chocolate com Frutas",
-    image: "https://source.unsplash.com/400x300/?fruit-bouquet",
+    image: buqueImg,
   },
 ];
+
 
 export default function Categories() {
   return (
@@ -43,21 +49,26 @@ export default function Categories() {
             whileHover={{ scale: 1.05, y: -10, rotate: 1 }}
             transition={{ type: "spring", stiffness: 300 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="bg-white rounded-2xl shadow"
+            className="bg-white rounded-2xl shadow overflow-hidden"
+            tabIndex={0} // torna o card focável via teclado
+            aria-label={`Categoria ${cat.title}`}
           >
             <img
               src={cat.image}
               alt={cat.title}
               className="w-full aspect-video object-cover rounded-t-2xl"
+              loading="lazy"
+              decoding="async"
             />
             <div className="p-5 text-center">
               <h3 className="text-xl font-semibold mb-4 text-amber-900">{cat.title}</h3>
               <Link
                 to={`/produtos/${cat.type}`}
                 className="inline-flex items-center justify-center bg-gradient-to-r from-pink-500 to-pink-700 text-white px-5 py-2.5 rounded-full hover:from-pink-600 hover:to-pink-800 transition-all duration-300"
+                aria-label={`Ver catálogo da categoria ${cat.title}`}
               >
                 Ver Catálogo
-                <ArrowRightIcon className="h-5 w-5 ml-2" />
+                <ArrowRightIcon className="h-5 w-5 ml-2" aria-hidden="true" />
               </Link>
             </div>
           </motion.div>

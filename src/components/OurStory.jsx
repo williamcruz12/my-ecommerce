@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import chocImg from "../assets/choc.jpg";
+import buqueImg from "../assets/buque.jpeg";
 
 export default function OurStory() {
   return (
     <section 
       className="relative py-20 md:py-20 bg-cover bg-center bg-no-repeat rounded-xl overflow-hidden"
-      style={{ backgroundImage: `url(${chocImg})` }}
+      style={{ backgroundImage: `url(${buqueImg})` }}
     >
       {/* Sobreposição para escurecer e destacar texto */}
       <div className="absolute inset-0 bg-pink-100/30 backdrop-blur-sm z-0"></div>
@@ -41,7 +41,7 @@ export default function OurStory() {
         >
           <div className="w-48 h-48 md:w-60 md:h-60 rounded-full border-4 border-pink-400 overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 mx-auto md:mx-0">
             <img 
-              src={chocImg}
+              src={buqueImg}
               alt="Nossa história"
               className="w-full h-full object-cover"
             />

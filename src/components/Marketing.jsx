@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaStar, FaHeart, FaGift } from "react-icons/fa";
-import chocImg from "../assets/choc.jpg";
+import choc2Img from "../assets/choc2.jpg";
 
 export default function Marketing() {
   const icons = [
@@ -14,17 +14,17 @@ export default function Marketing() {
   return (
     <section
       className="
-        relative py-16 md:py-24
+        relative min-h-[80vh]
         bg-cover bg-center bg-no-repeat rounded-xl overflow-hidden
-        sm:px-6 px-4
+        sm:px-6 px-4 flex items-center justify-center
       "
-      style={{ backgroundImage: `url(${chocImg})` }}
+      style={{ backgroundImage: `url(${choc2Img})` }}
     >
-      {/* Brilho animado central no fundo */}
+      {/* Brilho animado central */}
       <motion.div
         className="
           absolute
-          top-1/2 left-1/2
+          top-1/5 left-1/2
           w-[300px] h-[300px] sm:w-[600px] sm:h-[600px]
           -translate-x-1/2 -translate-y-1/2
           rounded-full
@@ -35,7 +35,7 @@ export default function Marketing() {
         "
       />
 
-      {/* Ícones flutuantes, escondidos em telas muito pequenas para não poluir */}
+      {/* Ícones animados */}
       {icons.map((item, i) => (
         <motion.div
           key={i}
@@ -48,18 +48,15 @@ export default function Marketing() {
         </motion.div>
       ))}
 
-      {/* Conteúdo principal */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-wide text-white drop-shadow-2xl mb-4">
-          Produtos Premium para Você
-        </h2>
-
-        <div className="h-1 w-20 sm:w-24 mx-auto bg-white/80 rounded-full mb-6"></div>
-
-        <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-xl sm:max-w-2xl mx-auto leading-relaxed drop-shadow-md">
-          Encontre os melhores produtos artesanais, feitos com carinho e qualidade excepcional.
-          Cada detalhe foi pensado para surpreender, encantar e adoçar o seu dia com muito estilo.
-        </p>
+      {/* Botão principal */}
+      <div className="relative z-10 text-center">
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-8 py-4 bg-white/90 text-pink-700 font-bold text-xl rounded-full shadow-md hover:bg-white transition"
+        >
+          Comprar
+        </motion.button>
       </div>
     </section>
   );

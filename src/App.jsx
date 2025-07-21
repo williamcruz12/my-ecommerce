@@ -4,8 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import Navbar from "./components/Navbar";
 import Marketing from "./components/Marketing";
-import Categories from "./components/Categories";
 import FeaturedProducts from "./components/FeaturedProducts";
+import Categories from "./components/Categories";
 import OurStory from "./components/OurStory";
 import ProductsPage from "./pages/ProductsPage";
 import ChefCami from "./components/ChefCami";
@@ -47,8 +47,8 @@ function AnimatedRoutes() {
             element={
               <>
                 <Marketing />
-                <Categories />
                 <FeaturedProducts />
+                <Categories />
                 <OurStory />
                 <ChefCami /> 
                 <Diferenciais />

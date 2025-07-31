@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaStar, FaHeart, FaGift } from "react-icons/fa";
-import choc2Img from "../assets/choc2.jpg";
+import logoImg from "../assets/logo.png";
 
 export default function Marketing() {
   const icons = [
@@ -14,11 +14,11 @@ export default function Marketing() {
   return (
     <section
       className="
-        relative min-h-[80vh]
+        relative min-h-[70vh]
         bg-cover bg-center bg-no-repeat rounded-xl overflow-hidden
         sm:px-6 px-4 flex items-center justify-center
       "
-      style={{ backgroundImage: `url(${choc2Img})` }}
+      style={{ backgroundImage: `url(${logoImg})` }}
     >
       {/* Brilho animado central */}
       <motion.div
